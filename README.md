@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cam's Corner — World Cup 2026 Blog
 
-## Getting Started
+A personal match-day blog for the 2026 FIFA World Cup. Built with Next.js (App Router), Tailwind CSS, and live data from the football-data.org API.
 
-First, run the development server:
+## What it does
+
+- Live scores ticker bar on every page
+- Daily preview and match-review posts written in Markdown
+- Standings table pulled live from the API
+- Match calendar with upcoming fixtures
+- Bracket page for the knockout rounds
+
+## Stack
+
+| Layer | Tech |
+|---|---|
+| Framework | Next.js 16 (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS v4 |
+| Data | football-data.org REST API |
+| Content | Markdown files in `posts/` via gray-matter |
+| Prose rendering | remark + remark-html |
+
+## Setup
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Create `.env.local` with:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+FOOTBALL_API_BASE=https://api.football-data.org/v4
+FOOTBALL_API_KEY=your_key_here
+WORLD_CUP_ID=2000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Run
 
-## Learn More
+```bash
+npm run dev      # localhost:3000
+npm run build    # production build
+npm run lint     # ESLint
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Dependencies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+All dependencies live in `package.json` — there is no Python layer. Node 18+ required.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Content workflow
 
-## Deploy on Vercel
+Add a new Markdown file to `posts/` with the required frontmatter and the post appears automatically on the home page and the `/posts`, `/previews`, or `/reviews` routes.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Required frontmatter fields:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```yaml
+---
+title: "Post title"
+date: "YYYY-MM-DD"
+type: preview   # or review
+excerpt: "One-line teaser shown on post cards"
+---
+```
+
+Optional fields: `match` (fuzzy-matched to API fixture names for inline match cards), `venues` (map of "Home vs Away" to "Stadium, City").
+
+## Project layout
+
+```
+app/           Next.js App Router pages and API routes
+components/    Shared UI components (MatchCard, ScoresBar, etc.)
+lib/           API helpers (football.ts) and content helpers (posts.ts, dates.ts)
+posts/         Markdown content — one file per day/post
+public/        Static assets
+```

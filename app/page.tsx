@@ -1,65 +1,112 @@
-import Image from "next/image";
+import { getMatches } from '@/lib/football';
+import { getPostsByType, getPost, type Post } from '@/lib/posts';
+import ArticleWithCards from '@/components/ArticleWithCards';
+import Link from 'next/link';
 
-export default function Home() {
+export const revalidate = 60;
+
+
+type ApiMatch = { id: number; utcDate: string; status: string; homeTeam: { name: string }; awayTeam: { name: string }; score: { fullTime: { home: number | null; away: number | null } }; stage: string; group?: string };
+
+async function getMatchesForPost(post: Post): Promise<ApiMatch[]> {
+  try {
+    // Fetch ±1 day: early UTC games land the day before, late games (8pm CT) land the day after
+    const base = new Date(post.date + 'T12:00:00');
+    const prev = new Date(base); prev.setDate(prev.getDate() - 1);
+    const next = new Date(base); next.setDate(next.getDate() + 1);
+    return await getMatches(prev.toISOString().slice(0, 10), next.toISOString().slice(0, 10));
+  } catch {
+    return [];
+  }
+}
+
+export default async function HomePage() {
+  const reviews = getPostsByType('review');
+  const previews = getPostsByType('preview');
+
+  const latestReview = reviews[0] ? getPost(reviews[0].slug) : null;
+  const latestPreview = previews[0] ? getPost(previews[0].slug) : null;
+
+  const [reviewMatches, previewMatches] = await Promise.all([
+    latestReview ? getMatchesForPost(latestReview) : [],
+    latestPreview ? getMatchesForPost(latestPreview) : [],
+  ]);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+      {/* LEFT — Latest Review */}
+      <section className="min-w-0">
+        <div className="flex items-center gap-2 mb-4 pb-3 border-b border-green-800">
+          <span className="w-1 h-5 bg-green-500 rounded-full" />
+          <h2 className="text-sm font-bold text-green-400 uppercase tracking-widest">Review</h2>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+
+        {latestReview ? (
+          <article>
+            <p className="text-gray-500 text-xs mb-1">
+              {new Date(latestReview.date + 'T12:00:00').toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}
+            </p>
+            <h3 className="text-xl font-bold text-white mb-4 leading-snug">{latestReview.title}</h3>
+
+            <ArticleWithCards
+              content={latestReview.content}
+              matches={reviewMatches}
+              venues={latestReview.venues}
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+            {reviews.length > 1 && (
+              <div className="mt-6 pt-4 border-t border-gray-800">
+                <p className="text-xs text-gray-600 uppercase tracking-wider mb-2">Earlier Reviews</p>
+                {reviews.slice(1, 4).map((p) => (
+                  <Link key={p.slug} href={`/posts/${p.slug}`} className="block py-1.5 text-sm text-gray-400 hover:text-white border-b border-gray-800 truncate">
+                    {p.title}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </article>
+        ) : (
+          <p className="text-gray-600 text-sm italic">No reviews posted yet.</p>
+        )}
+      </section>
+
+      {/* CENTER — Latest Preview */}
+      <section className="min-w-0">
+        <div className="flex items-center gap-2 mb-4 pb-3 border-b border-blue-800">
+          <span className="w-1 h-5 bg-blue-500 rounded-full" />
+          <h2 className="text-sm font-bold text-blue-400 uppercase tracking-widest">Preview</h2>
         </div>
-      </main>
+
+        {latestPreview ? (
+          <article>
+            <p className="text-gray-500 text-xs mb-1">
+              {new Date(latestPreview.date + 'T12:00:00').toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}
+            </p>
+            <h3 className="text-xl font-bold text-white mb-4 leading-snug">{latestPreview.title}</h3>
+
+            <ArticleWithCards
+              content={latestPreview.content}
+              matches={previewMatches}
+              venues={latestPreview.venues}
+            />
+
+            {previews.length > 1 && (
+              <div className="mt-6 pt-4 border-t border-gray-800">
+                <p className="text-xs text-gray-600 uppercase tracking-wider mb-2">Earlier Previews</p>
+                {previews.slice(1, 4).map((p) => (
+                  <Link key={p.slug} href={`/posts/${p.slug}`} className="block py-1.5 text-sm text-gray-400 hover:text-white border-b border-gray-800 truncate">
+                    {p.title}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </article>
+        ) : (
+          <p className="text-gray-600 text-sm italic">No previews posted yet.</p>
+        )}
+      </section>
+
     </div>
   );
 }

@@ -4,10 +4,10 @@ date: "2026-06-21"
 type: preview
 excerpt: "Spain look to bounce back in a big way against Saudi Arabia, Belgium need to right the ship against Iran, Uruguay take on Cabo Verde in a fascinating tactical puzzle, and New Zealand and Egypt meet in what could be the most competitive game of the day."
 venues:
-  "Spain vs Saudi Arabia": "TODO"
-  "Belgium vs Iran": "TODO"
-  "Uruguay vs Cape Verde Islands": "TODO"
-  "New Zealand vs Egypt": "TODO"
+  "Spain vs Saudi Arabia": "Atlanta, GA"
+  "Belgium vs Iran": "Los Angeles, CA"
+  "Uruguay vs Cape Verde Islands": "Miami, FL"
+  "New Zealand vs Egypt": "Vancouver, BC"
 ---
 
 ## Spain vs Saudi Arabia

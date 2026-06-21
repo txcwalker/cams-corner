@@ -6,8 +6,8 @@ excerpt: "The Netherlands and Sweden collide in Houston, Germany face their firs
 venues:
   "Netherlands vs Sweden": "Houston, TX"
   "Germany vs Ivory Coast": "Toronto, ON"
-  "Ecuador vs Curaçao": "TODO"
-  "Tunisia vs Japan": "TODO"
+  "Ecuador vs Curaçao": "Kansas City, MO"
+  "Tunisia vs Japan": "Monterrey, Mexico"
 ---
 
 ## Netherlands vs Sweden

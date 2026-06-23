@@ -1,0 +1,37 @@
+---
+title: "Tuesday June 23rd — Preview: Groups K & L"
+date: "2026-06-23"
+type: preview
+excerpt: "Portugal must right the ship against Uzbekistan in Houston, England and Ghana meet in a feisty Boston battle, Croatia look to bounce back big against Panama in Toronto, and Colombia face a dangerous Congo DR side in Guadalajara."
+venues:
+  "Portugal vs Uzbekistan": "Houston, TX"
+  "England vs Ghana": "Boston, MA"
+  "Panama vs Croatia": "Toronto, ON"
+  "Colombia vs Congo DR": "Guadalajara, Mexico"
+---
+
+## Portugal vs Uzbekistan
+
+The Portuguese and the Uzbeks face off in Houston to start off Tuesday's action. For me, this is the turning point for the Quinas of Portugal. Look — Ronaldo is one of the best players of all time and was the best in the world at plenty of important aspects of the game. He still might be the best header of the ball in the world. But he cannot be starting these games. He should be on the team, and in scenarios where a goal is needed, he should be subbed on. There is too much talent on this squad to be playing a guy who is holding back to try and play the whole game and is otherwise washed after 30 minutes.
+
+To be clear, he should be campaigning for himself. He should want to play and demand the ball — he is great, but he is also 40 and no longer has the top-level skills he once did. I want all my players to be demanding and inconvenient like Ronaldo; they need to believe in themselves, otherwise why would their teammates? But it is the manager's job to put the best players on the pitch to win the game, and it is clear that Ronaldo should not be out there from the start. This is a must-win for the Portuguese. Anything less and they can board the Santa Maria home.
+
+For the Uzbeks, I want to see them build off their game against Colombia and the game plan that the DRC laid out last week. The White Wolves are here mostly as a learning experience for 2030 and 2034. That doesn't mean they can't cause problems or even advance, but they are vastly outclassed talent-wise. What I'm looking for most is improvement on their set-piece delivery and service in general, and continuing to stay organized at the back — they didn't really get pulled out of position until the last ten minutes when chasing the game. Ultimately, I am expecting a thrashing, as Portugal might have the most individual talent of any team in the tournament. Similar script to France and Iraq. Portugal 4–0.
+
+## England vs Ghana
+
+Boston plays host to our second colonization battle as England and Ghana face off to open up Group L action for the day. As mentioned in the France–Senegal preview, these games are always a bit angrier than standard. The former colony always plays with a ferocity, like they have been systematically mistreated in the past. Curious. Expect a physical game, and neither team will mind — in fact, I expect both to embrace it. On paper, this looks like a blowout, but only a fool would believe that. We saw plenty of skill on display from the Ghanaian players against Panama.
+
+For England, I am looking for them to pick up where they left off in Dallas against Croatia. I thought their second half was better than the first — they created chances rather than relying purely on Croatian mistakes as they did in the opening period. England have an embarrassment of riches in their front six, so don't be surprised to see changes up top, especially on the wings, as they will need to deal with Antoine Semenyo. Speaking of which, if Ghana is going to make some noise here, it must come through him — creating, scoring, running, whatever it is, it starts there. One note for Ghana, which is good news for the soccer team and bad news for everyone else, is that they get Thomas Partey back. He is unfortunately quite talented and one of the best holding midfielders in the world — a big upgrade over the squad that edged past Panama. On a side note: why is it that when athletes commit felonies it's always rape or sexual assault? Why can't they mastermind a diamond heist or try to sell a forged Rembrandt to the Louvre? Anyway. I am expecting a hyper-competitive game, a couple more yellow cards than normal, and some extravagant skill you don't often get to see. England ices the game late in a contentious 3–1 win.
+
+## Panama vs Croatia
+
+Toronto hosts the second must-win game of the day as the Panamanians and Croats take the field. There are no two ways about it — Croatia are huge favorites here, which bodes well for a team that needs three points. Their first game produced two goals that will likely end up in the top-20 tournament compilations on YouTube. Their main man Luka Modrić had a horrific game against England in their 4–2 loss and might have been the worst player on the pitch — highly uncharacteristic of him, and I expect a big bounce back. With their poise in the middle and speed on the outside, expect a proper get-right spot for Croatia.
+
+For Panama, they played way too passively in game one against Ghana. Even if it means losing 3–0 or 4–0, I want to see them actively trying to win rather than playing for a draw. They never looked likely to score — even with the ball, it felt like possession without intent. As mentioned in game one's preview and review, there is no real star on this team, no standout whom the others can look toward in big moments. While not always necessary, it is often helpful — especially for smaller countries not used to playing in front of these crowds or against this level of talent. I am not optimistic about their chances and am expecting them to be quite unhappy after the final whistle. Croatia looks to recover some goal differential. 4–0 Croatia.
+
+## Colombia vs Congo DR
+
+Our final game of the day brings us to Guadalajara as Colombia makes the short trip to face off against the DRC. Les Léopards of Congo gave us one of the shocks of the first round, managing a point from one of the tournament favorites in Portugal. Perhaps the most impressive part was that they went down 1–0 within five minutes and were able to keep their cool, battle back, and earn their point. Of course, they had a bit of luck and may be the last team to profit from Ronaldo's ego — but they played the team in front of them and must be pleased with the result. They are looking to keep the train moving against the Colombians, and I like their chances. Having players like Yoane Wissa and Aaron Wan-Bissaka is what distinguishes teams like Congo DR from teams like Panama. They have big-time players who play meaningful roles for their Premier League clubs — players who can calm the nerves and remind everyone it is just a game. If they are to take another point or three, look to those two for big performances.
+
+For Colombia, a not-very-impressive 3–1 win over Uzbekistan last week will do — they'll take the three points. They showed spurts of greatness but couldn't really put it together. James Rodríguez looked alright — well, he looked like a former star who is now 35 years old. They wanted to play through him and former Bayern Munich man Luis Díaz, but the chemistry just wasn't there most of the time. The Uzbeks are the weakest team in the group, and Colombia are going to have to step up their performance to lock up a knockout stage spot. If Luis Díaz can exert his talent and make his presence known, it looks good for the Colombians. In a baby surprise, Les Léopards scratch out another 1–1 draw and put themselves in an excellent spot to advance to the knockouts.

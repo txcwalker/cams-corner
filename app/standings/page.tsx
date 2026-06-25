@@ -1,7 +1,7 @@
 import { getStandings } from '@/lib/football';
 import StandingsTable from '@/components/StandingsTable';
 
-export const revalidate = 60;
+export const dynamic = 'force-dynamic';
 
 export default async function StandingsPage() {
   let standings: Awaited<ReturnType<typeof getStandings>> = [];

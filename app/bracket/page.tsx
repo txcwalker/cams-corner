@@ -202,7 +202,17 @@ export default async function BracketPage() {
         <div className="text-center py-16">
           <p className="text-5xl mb-4">🏆</p>
           <p className="text-gray-400 text-lg font-medium">Knockout stage hasn&apos;t started yet</p>
-          <p className="text-gray-600 text-sm mt-1">Check back once the group stage concludes</p>
+          <p className="text-gray-600 text-sm mt-2">
+            View the full bracket and schedule on the{' '}
+            <a
+              href="https://www.bbc.com/sport/football/world-cup/schedule#KnockoutStage"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-yellow-400 underline hover:text-yellow-300"
+            >
+              BBC World Cup Schedule
+            </a>
+          </p>
         </div>
       ) : (
         <div className="overflow-x-auto pb-6">

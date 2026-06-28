@@ -58,4 +58,8 @@ For Jordan, in their first World Cup appearance, they scored in all three of the
 
 ## Algeria vs Austria
 
-*Review coming soon.*
+In possibly the game of the group stage — and the tournament — we had Algeria and Austria showing us exactly what the beautiful game is all about. If you haven't seen how this ends, please go watch and then come back. Fantastic ending to an entertaining game.
+
+This was an evenly matched contest, as the 3–3 scoreline suggests. While there were mistakes on the field, there was also plenty of quality — and we finally got to see two approximately equal sides go head to head. It validates each of their rankings and gives us a real look at their possibilities going forward.
+
+Each team scored in stoppage time, as Austria went from second to eliminated to second in a matter of three minutes of real time. Completely electric atmosphere and an outpouring of emotion in the worst and best way possible — depending on which side you were on. This is what the World Cup is about, on the field and at home. Lovely game to watch.
